@@ -1,0 +1,7 @@
+torch==2.13.0
+torchvision==0.28.0
+tensorflow==2.21.0
+numpy==2.5.0
+matplotlib==3.11.0
+ipykernel==7.3.0
+notebook==7.6.0

@@ -26,22 +26,31 @@ Travaux pratiques comparant les deux frameworks deep learning majeurs sur des pr
 ## Lancer le notebook
 
 ```bash
-# Créer l'environnement
+# 1. Créer un environnement virtuel isolé
 python -m venv env
-source env/bin/activate
+source env/bin/activate        # macOS / Linux
+# env\Scripts\activate         # Windows
 
-# Installer les dépendances
-pip install torch torchvision tensorflow matplotlib jupyter
+# 2. Installer les dépendances exactes
+pip install -r requirements.txt
 
-# Lancer Jupyter
+# 3. Lancer Jupyter
 jupyter notebook tp3_deep_learning.ipynb
 ```
 
-## Dépendances
+> L'environnement virtuel est isolé — il n'utilise pas les packages installés sur le système.
 
-- Python ≥ 3.10
-- torch ≥ 2.0
-- torchvision
-- tensorflow ≥ 2.12
-- matplotlib
-- numpy
+## Dépendances (requirements.txt)
+
+| Package | Version |
+|---|---|
+| torch | 2.13.0 |
+| torchvision | 0.28.0 |
+| tensorflow | 2.21.0 |
+| numpy | 2.5.0 |
+| matplotlib | 3.11.0 |
+| notebook | 7.6.0 |
+
+Python ≥ 3.10 requis.
+
+> **Note GPU** : torch et tensorflow détectent automatiquement CUDA (NVIDIA) et MPS (Apple Silicon). Sur CPU, le notebook fonctionne mais l'entraînement est plus lent.
